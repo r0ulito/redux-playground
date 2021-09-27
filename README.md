@@ -52,8 +52,8 @@ store.dispatch({ type: 'counter/decremented' })
 
 ## Énoncé
 
-Nous allons initialiser npm avec la commande `npm init -y`.
-Ensuite nous allons installer redux avec la commande `npm i redux`.
+
+Nous allons installer redux avec la commande `npm i redux`.
 
 En nous aidant de l'exemple ci-dessus: 
 - Initialisons une variable d'état contenant 
