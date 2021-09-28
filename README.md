@@ -9,7 +9,10 @@
 import { createStore } from 'redux'
 
 /**
- * Ceci est un reducer (entonnoir) - C'est une fonction qui prend une valeur de l'état courant et une objet action qui décrit ce qui "vient de se passer" et qui retourne un nouvelle valeur d'état
+ * Ceci est un reducer (entonnoir) - C'est une fonction qui prend une valeur de l'état courant, 
+ * et un objet action qui décrit ce qui "vient de se passer", 
+ * et qui retourne un nouvelle valeur d'état.
+ * 
  * La signature de la fonction est la suivante (state, action) => newState
  *
  * L'état Redux ne doit contenir que des objets JavaScript, des arrays, et des types primitifs
