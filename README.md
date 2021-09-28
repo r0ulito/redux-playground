@@ -33,7 +33,7 @@ function counterReducer(state = { value: 0 }, action) {
 }
 
 // createStore nous permet de créer un Store Redux qui contiendra l'état de notre app
-// Les API sont { subscribe, dispatch, getState }
+// Nous pouvons utiliser les API { subscribe, dispatch, getState }
 let store = createStore(counterReducer)
 
 // Il est possible d'utiliser subscribe() pour mettre à jour l'UI en réponse aux changements d'état
@@ -52,8 +52,10 @@ store.dispatch({ type: 'counter/decremented' })
 
 ## Énoncé
 
+En premier lieu nous allons créer une nouvelle application react grâce à la commande `npx create-react-app redux-is-magic`
 
-Nous allons installer redux avec la commande `npm i redux`.
+
+Puis nous allons installer redux avec la commande `npm i redux`.
 
 En nous aidant de l'exemple ci-dessus: 
 - Initialisons une variable d'état contenant 
