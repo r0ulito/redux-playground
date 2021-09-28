@@ -17,7 +17,7 @@ import { createStore } from 'redux'
  *
  * L'état Redux ne doit contenir que des objets JavaScript, des arrays, et des types primitifs
  * La valeur de base est habituellement un objet.
- * Il est iumportant de ne pas muter l'état directement, mais de retourner un nouvel objet si l'état change
+ * Il est important de ne pas muter l'état directement, mais de retourner un nouvel objet si l'état change
  *
  * On peut utiliser n'importe quelle logique dans le reducer. 
  * Dans cet exemple il y a un switch mais ce n'est pas obligatoire
