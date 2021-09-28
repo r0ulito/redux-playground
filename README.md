@@ -64,7 +64,7 @@ Puis nous allons installer redux avec la commande `npm i redux`.
 En nous aidant de l'exemple ci-dessus: 
 - Initialisons une variable d'état contenant 
     ```js
-    let state = {
+    let initialState = {
         greetings : "Not in the mood"
     }
     ```
