@@ -1,0 +1,21 @@
+{
+  "name": "redux-playground",
+  "version": "1.0.0",
+  "description": "Redux learning module in french",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/r0ulito/redux-playground.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/r0ulito/redux-playground/issues"
+  },
+  "homepage": "https://github.com/r0ulito/redux-playground#readme"
+}

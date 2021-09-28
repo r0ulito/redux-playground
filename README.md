@@ -54,8 +54,10 @@ store.dispatch({ type: 'counter/decremented' })
 
 En premier lieu nous allons créer une nouvelle application react grâce à la commande `npx create-react-app redux-is-magic`
 
+Nous nous placerons dans le dossier fraîchement créer et nous ajouterons redux comme dépendance avec `npm i redux`.
 
-Puis nous allons installer redux avec la commande `npm i redux`.
+Commentons tous ce qui se trouve dans le fichier `App.js`.
+C'est dans ce fichier que nous allons travailler.
 
 En nous aidant de l'exemple ci-dessus: 
 - Initialisons une variable d'état contenant 
