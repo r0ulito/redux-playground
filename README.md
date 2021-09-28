@@ -19,7 +19,8 @@ import { createStore } from 'redux'
  * La valeur de base est habituellement un objet.
  * Il est iumportant de ne pas muter l'état directement, mais de retourner un nouvel objet si l'état change
  *
- * On peut utiliser n'importe quelle logique dans le reducer. Dans cet exemple il y a un switch mais ce n'est pas obligatoire
+ * On peut utiliser n'importe quelle logique dans le reducer. 
+ * Dans cet exemple il y a un switch mais ce n'est pas obligatoire
  */
 function counterReducer(state = { value: 0 }, action) {
   switch (action.type) {
