@@ -9,14 +9,18 @@
 import { createStore } from 'redux'
 
 /**
- * Ceci est un reducer (entonnoir) - C'est une fonction qui prend une valeur de l'état courant et une objet action qui décrit ce qui "vient de se passer" et qui retourne un nouvelle valeur d'état
+ * Ceci est un reducer (entonnoir) - C'est une fonction qui prend une valeur de l'état courant, 
+ * et un objet action qui décrit ce qui "vient de se passer", 
+ * et qui retourne un nouvelle valeur d'état.
+ * 
  * La signature de la fonction est la suivante (state, action) => newState
  *
  * L'état Redux ne doit contenir que des objets JavaScript, des arrays, et des types primitifs
  * La valeur de base est habituellement un objet.
  * Il est iumportant de ne pas muter l'état directement, mais de retourner un nouvel objet si l'état change
  *
- * On peut utiliser n'importe quelle logique dans le reducer. Dans cet exemple il y a un switch mais ce n'est pas obligatoire
+ * On peut utiliser n'importe quelle logique dans le reducer. 
+ * Dans cet exemple il y a un switch mais ce n'est pas obligatoire
  */
 function counterReducer(state = { value: 0 }, action) {
   switch (action.type) {
@@ -33,7 +37,7 @@ function counterReducer(state = { value: 0 }, action) {
 }
 
 // createStore nous permet de créer un Store Redux qui contiendra l'état de notre app
-// Les API sont { subscribe, dispatch, getState }
+// Nous pouvons utiliser les API { subscribe, dispatch, getState }
 let store = createStore(counterReducer)
 
 // Il est possible d'utiliser subscribe() pour mettre à jour l'UI en réponse aux changements d'état
@@ -54,10 +58,8 @@ store.dispatch({ type: 'counter/decremented' })
 
 En premier lieu nous allons créer une nouvelle application react grâce à la commande `npx create-react-app redux-is-magic`
 
-Nous nous placerons dans le dossier fraîchement créer et nous ajouterons redux comme dépendance avec `npm i redux`.
 
-Commentons tous ce qui se trouve dans le fichier `App.js`.
-C'est dans ce fichier que nous allons travailler.
+Puis nous allons installer redux avec la commande `npm i redux`.
 
 En nous aidant de l'exemple ci-dessus: 
 - Initialisons une variable d'état contenant 
@@ -83,4 +85,4 @@ Il répondra à deux actions nommées respectivement :
 
 ---
 
-Pour passer à la suite vous devez commit vos changements puis checkout sur la branche exo2
+Pour passer à la suite vous devez commit vos changements puis checkout sur la branche exo3
