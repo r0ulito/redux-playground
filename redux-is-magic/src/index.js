@@ -1,32 +1,74 @@
-import { createStore } from 'redux'
+import { createStore, combineReducers } from "redux";
 
 let initialState = {
-  greetings: "Not In the moood!"
-}
-function greetingsReducer(state = initialState, action) {
+  greetings: "Not in the mood",
+};
+
+const GreetingsReducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'greetings/sayHello':
-      return { greetings: "Hello world!" }
-    case 'greetings/sayGoodbye':
-      return { greetings: "Goodbye!" }
+    case "greetings/sayHello":
+      return {
+        ...state,
+        greetings: "Hello world!",
+      };
+    case "greetings/sayGoodbye":
+      return {
+        ...state,
+        greetings: "Goodbye!",
+      };
     default:
-      return state
+      return state;
   }
-}
+};
 
-let store = createStore(greetingsReducer)
+let todoState = {
+  todos: [
+    {
+      id: 1,
+      title: "Pas de titre",
+    },
+    {
+      id: 2,
+      title: "J'ai un titre",
+    },
+  ],
+};
 
-store.subscribe(() => console.log(store.getState()))
+const TodoReducer = (state = todoState, action) => {
+  switch (action.type) {
+    case "todo/delete":
+      return {
+        todos: state.todos.filter((todo) => todo.id !== action.payload.id)
+      }
 
-store.dispatch({ type: 'greetings/sayHello' })
-// {greetings: "Hello world!"}
-store.dispatch({ type: 'greetings/sayHello' })
-// {greetings: "Hello world!"}
-store.dispatch({ type: 'greetings/sayGoodbye' })
-// {greetings: "Goodbye!"}
+    case "todo/add":
+      return;
 
+    default:
+      return state;
+  }
+};
 
+const megaReducer = combineReducers({
+  todos: TodoReducer,
+  greetings: GreetingsReducer,
+});
 
+let store = createStore(
+  megaReducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
+
+store.subscribe(() => console.log(store.getState()));
+
+store.dispatch({ type: "" });
+store.dispatch({ type: 'todo/delete', payload : { id : 2}})
+store.dispatch({ type: "greetings/sayGoodbye" });
+store.dispatch({ type: "greetings/sayHello" });
+store.dispatch({ type: "greetings/sayGoodbye" });
+store.dispatch({ type: "" });
+store.dispatch({ type: "greetings/sayHello" });
+store.dispatch({ type: "greetings/sayGoodbye" });
 
 /* import React from 'react';
 import ReactDOM from 'react-dom';
